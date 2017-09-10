@@ -1,0 +1,158 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+    % END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+
+\vspace*{-40pt}
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Abhijit Makhal}}\\
+	1051, South 4th ave, Apt\# 21, Pocatello, ID, 83201 $\cdot$ makhabhi@isu.edu $\cdot$ (208) 380-8366 $\cdot$ github.com/jontromanab\\
+\end{center}
+
+\vspace*{2mm}
+
+%==== Education ====%
+\header{Education}
+\textbf{Idaho State University}\hfill Pocatello, Idaho\\
+PhD Measurement and Control Engineering \hfill Grad: December 2017\\
+\vspace{2mm}
+\textbf{Indian Institute of Information Technology}\hfill Allahabad, India\\
+Masters Computer Science \hfill Grad: May 2010\\
+\vspace{2mm}
+\textbf{Bengal Institute of Technology \& Management}\hfill Kolkata, India\\
+BTech Electronics and Communication Engineering \hfill Grad: May 2007\\
+\vspace{2mm}
+
+\vspace*{2mm}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Human Centered Robotics Lab, University Of Washington} \hfill Seattle, WA\\
+\textit{Research Scientist (supervisor: Prof. Maya Cakmak, Prof. Siddhartha S. Srinivasa)} \hfill June, 2017 | Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Whole Body Control of Mobile Manipulators (Fetch, PR2)
+	\item Motion Planning for large surface cleaning by Arm, torso and Base
+	\item Interface for controlling ROS-controlled robot by OpenRave
+\end{itemize}
+
+\textbf{Institut de Robòtica i Informàtica industrial} \hfill Barcelona, Spain\\
+\textit{Visiting Research Scientist} \hfill April, 2017 | May, 2017\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Grasp execution of superquadric fitting on WAM arms
+\end{itemize}
+
+\textbf{ROS-Industrial (Google Summer of Code)} \hfill Home\\
+\textit{Research Internship} \hfill May, 2016 | August, 2016\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Reachability Map generation of any redundant or non-redundant robotic arm
+	\item Proposed Various Base placement techniques by Reachability map inversion
+	\item Validation of base placement theories on real robot and simulation
+\end{itemize}
+
+\textbf{Idaho State University} \hfill Pocatello, Idaho\\
+\textit{Research Assistant (supervisor: Dr. Alba Perez Gracia)} \hfill August, 2013 | Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Superquadric fitting and pose estimation of unknown objects from point cloud data
+	\item Proposed Mirroring techniques to approximate occluded regions from single view point cloud
+	\item Proposed novel grasping algorithm for superquadrics
+	\item Grasp execution of unknown objects in isolation or cluttered scenerio
+\end{itemize}
+
+\header{Skills}
+\begin{tabular}{ l l }
+	Programming:       & C, C++, Python, Matlab, Mathematica                                   \\
+	Software Tools:    & ROS, PCL, OpenCV, OpenRAVE, MoveIT, OMPL, GraspIT, Tensorflow         \\
+	Robotic Hardware:  & PR2, Fetch, WAM, UR5, Barrett, Robotiq, NAO, Turtlebot, HOAP2, Biloid \\
+	Robotic Simulator: & Gazebo, V-Rep, Webot                                                  \\
+	Operating Systems: & Ubuntu, Windows                                                       \\
+\end{tabular}
+
+\vspace*{2mm}
+
+\header{Projects}
+{\textbf{Superquadric Grasping} \sl C++, ROS, PCL, MoveIT} \hfill https://github.com/jontromanab/sq\_grasp\\
+A package to grasp unknown objects by superquadric fitting\\
+\vspace*{2mm}
+{\textbf{Reuleaux} \sl C++, ROS, IkFast, KDL, MoveIT} \hfill http://wiki.ros.org/reuleaux\\
+A package for robot reachability analysis and base placement\\
+\vspace*{2mm}
+{\textbf{FetchPy} \sl Python, ROS, OpenRave, Gazebo} \hfill https://github.com/jontromanab/fetchpy\\
+A package to control Fetch Robot from OpenRave\\
+\vspace*{2mm}
+
+\vspace*{2mm}
+
+        
+
+\ 
+\end{document}
