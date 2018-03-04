@@ -1,0 +1,223 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage{marvosym}
+	
+
+
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+    % END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+
+\vspace*{-40pt}
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Abhijit Makhal}}\\
+	1051, South 4th ave, Apt 33, Pocatello, ID, 83201 $\cdot$ makhabhi@isu.edu $\cdot$ (208) 380-8366 $\cdot$ \\Webpage: jontromanab.weebly.com \\ github: github.com/jontromanab\\ Linkedin: https://www.linkedin.com/in/abhijit-makhal-90356047
+\end{center}
+
+\vspace*{2mm}
+
+%==== Education ====%
+\header{Education}
+Idaho State University\hfill Pocatello, Idaho\\
+\textbf{PhD Measurement and Control Engineering} (GPA: 3.4/4.0) \hfill Grad: December 2017\\
+\vspace{2mm}
+Indian Institute of Information Technology \hfill Allahabad, India\\
+\textbf{Masters Computer Science} (GPA: 9.8/10.0) \hfill Grad: May 2010\\
+\vspace{2mm}
+Bengal Institute of Technology \& Management \hfill Kolkata, India\\
+\textbf{BTech Electronics and Communication Engineering} (GPA: 9.6/10.0)\hfill Grad: May 2007\\
+\vspace{2mm}
+
+\vspace*{2mm}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Human Centered Robotics Lab, University Of Washington} \hfill Seattle, WA\\
+\textit{Research Scientist (supervisors: Maya Cakmak, Siddhartha S. Srinivasa)}
+\hfill  June, 2017 | October, 2017\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Whole body control of mobile manipulators (Fetch, PR2)
+	\item Motion planning for large surface cleaning by arm, torso and base
+	\item Interface for controlling ROS-controlled robot by OpenRave
+\end{itemize}
+
+\textbf{Institut de Rob\`{o}tica i Inform\`{a}tica industrial: IRI} \hfill Barcelona, Spain\\
+\textit{Visiting Research Scientist (supervisor: Fredrico Thomas)} \hfill April, 2017 | May, 2017\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Grasp execution of superquadric fitting on WAM arms
+\end{itemize}
+
+\textbf{ROS-Industrial (Google Summer of Code)} \hfill Home\\
+\textit{Research Internship (supervisor: Alex K. Goins)} \hfill May, 2016 | August, 2016\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Reachability map generation of any redundant or non-redundant robotic arm
+	\item Base placement techniques by reachability map inversion
+	\item Validation of base placement theories on real robot and simulation
+\end{itemize}
+
+\textbf{Idaho State University} \hfill Pocatello, Idaho\\
+\textit{PhD Student (supervisor: Alba Perez Gracia)} \hfill August, 2013 | Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Superquadric fitting and pose estimation of unknown objects from point cloud data
+	\item Mirroring techniques to approximate occluded regions from single view point cloud
+	\item Novel online grasping algorithms for superquadrics
+	\item Grasp execution of unknown objects in isolation or cluttered scenario
+\end{itemize}
+
+\header{Skills}
+\begin{tabular}{ l l }
+	Programming:       & C, C++, Python, Matlab, Mathematica                                   \\
+	Software Tools:    & ROS, PCL, OpenCV, OpenRAVE, MoveIT, OMPL, GraspIT, Tensorflow         \\
+	Robotic Hardware:  & PR2, Fetch, WAM, UR5, Barrett, Robotiq, Nao, Turtlebot, HOAP2, Biloid \\
+	Robotic Simulator: & Gazebo, V-Rep, Webot                                                  \\
+	Operating Systems: & Ubuntu, Windows                                                       \\
+\end{tabular}
+
+\vspace*{2mm}
+
+\header{Projects}
+{\textbf{Superquadric Grasping} \sl C++, ROS, PCL, MoveIT} \hfill https://github.com/jontromanab/sq\_grasp\\
+A package to grasp unknown objects by superquadric fitting\\
+\vspace*{2mm}
+{\textbf{Reuleaux} \sl C++, ROS, IkFast, KDL, MoveIT} \hfill http://wiki.ros.org/reuleaux\\
+A package for robot reachability analysis and base placement\\
+\vspace*{2mm}
+{\textbf{FetchPy} \sl Python, ROS, OpenRave, Gazebo} \hfill https://github.com/jontromanab/fetchpy\\
+A package to control Fetch Robot from OpenRave\\
+\vspace*{2mm}
+
+\vspace*{22mm}
+\header{Date of Availability}
+\begin{itemize} \itemsep 1pt
+\item Thesis defense date: 13th April, 2018\\
+\item PhD graduation date: 5th May, 2018
+\end{itemize}
+
+\vspace*{4mm}
+
+
+\header{Contact References}
+\textbf{Dr. Alba Perez Gracia} (PhD supervisor)\\
+Department of Mechanical Engineering\\
+College of Science and Engineering\\
+Idaho State University\\
+921 S. 8th Ave, ID 832019\\
+208 282 5655\\
+perealba@isu.edu\\
+
+\vspace*{4mm}
+\textbf{Prof. Siddhartha S.Srinivasa}\\
+Boeing Endowed Professor\\
+Paul G. Allen School of Computer Science and Engineering\\
+University of Washington\\
+sidd@s.uw.edu\\
+
+\vspace*{4mm}
+\textbf{Prof. Maya Cakmak}\\
+Paul G. Allen School of Computer Science and Engineering\\
+University of Washington\\
+mcakmak@cs.washington.edu
+
+\vspace*{4mm}
+
+
+\header{Selected Publications}
+\textbf{Abhijit Makhal}, Frederico Thomas, Alba Perez Gracia, "Grasping Unknown Objects in Clutter by Superquadric Representation" IEEE International Conference on Robotic Computing, 2018, pp 292 - 300\\
+
+\vspace*{2mm}
+
+\textbf{Abhijit Makhal}, Alex K. Goins, "Reuleaux: Robot Base Placement by Reachability Analysis" IEEE International Conference on Robotic Computing, 2018, pp 137 - 143\\
+
+\vspace*{2mm}
+\textbf{Abhijit Makhal}, Alba-Perez-Gracia "Solvable Multi-fingered Hands for Exact Kinematic Synthesis" Advances in Robot Kinematics, 2014, pp 139-147\\
+
+\vspace*{2mm}
+\textbf{Abhijit Makhal}, M.Raj, K.Singh, P.Chakraborty and G.C.Nandi, "Path Planning through Maze Routing for a Mobile Robot with Nonholonomic Constraints", International Conference on Ubiquitous Robots and Ambient Intelligence (URAI), 2012, pp 325 - 331\\
+
+\vspace*{2mm}
+\textbf{Abhijit Makhal}, Manish Raj, Karan Singh, Rajan Singh, Pavan Chakraborty and G C Nandi. "ATOM- A Low-Cost Mobile Manipulation Platform for Research and Testing". International Journal of Applied Information Systems 4(10):1-7, December 2012. Published by Foundation of Computer Science, New York, USA\\
+
+\vspace*{2mm}
+\textbf{Abhijit Makhal}, A.Sar, S.K.Samanta, "Development of a Mobile Robot for Image Acquisition through Teleoperation" in Proceedings of 2nd International Conference on Computational Vision and Robotics (ICCVR ‘11), pp. 74-77, Bhubaneswar, INDIA, August 2011\\
+
+\vspace*{2mm}
+Manish Raj, Arpit Bansal, \textbf{Abhijit Makhal}, P Chakraborty, GC Nandi, "An approach towards rescue robotics in bore well environment" 2014 International Conference on Communications and Signal Processing (ICCSP), pp 1097 - 1100
+
+\vspace*{2mm}
+Sachin Kansal, \textbf{Abhijit Makhal}, Pavan Chakraborty, GC Nandi,"Tracking of a target person using face recognition by surveillance robot", 2012 International Conference on Communication, Information and Computing Technology (ICCICT), pp 1-6
+
+
+\end{document}
